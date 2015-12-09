@@ -1,0 +1,15 @@
+LS = C://busybox ls
+SH = C://busybox sh -c
+BASENAME=C://busybox basename
+PANDOC = C:/Users/kyamamot/AppData/Local/Pandoc/pandoc
+PANSTYLES = C:/Users/kyamamot/AppData/Roaming/pandoc
+SVN = W://Tokyo/Home/kyamamot/common/SVN
+REPO = $(SVN)/Barolo2
+REFERENCE = $(REPO)/150.docx
+OPTIONS = -s
+OPTIONS += --read=markdown+ignore_line_breaks+header_attributes+escaped_line_breaks+implicit_figures
+#OPTIONS += --reference-docx=$(REFERENCE)
+OPTIONS += --number-sections
+FINDCSV = $(REPO)/findcsv.sh
+PYTHON=python
+CSV2PNG=${REPO}/csv2png.py
