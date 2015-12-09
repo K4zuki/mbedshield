@@ -1,26 +1,29 @@
 ---
-Title: "mbeDshield: YET ANOTHER MBED"
-Author: "Kazuki Yamamoto(@_K4ZUKI_)"
-Abstract:
+title: "mbeDshield: YET ANOTHER MBED"
+author: "Kazuki Yamamoto(@_K4ZUKI_)"
+abstract:
   THE mbeDshield is YET ANOTHER MBED, which looks like arduino,
   will make you use ANY arduino "shields" from MBEDs
-  1768/11U24/11U35. This document is for current PCB design
-  version 0.5.0 and future design 0.6.0
-...
+  1768/11U24/**11U35**. **This document is for current PCB design
+  version 0.5.0 and future design 0.6.0**
+---
 
-- 26/Dec/2013 rev1.0
-- 30/Dec/2014 rev2.0
+- 31/Dec/2013 rev1.0 (C85)
+- 31/Dec/2014 rev2.0 (C87)
+- **31/Dec/2015 rev2.1 (C89)**
 
 # Contents{-}
-1. Version history
-2. Components
-3. Soldering of the Kit
-4. Software
-5. Schematics of v0.5.0
-6. Revision history
+1. _**Version history**_
+2. _**Components**_
+3. _**Soldering of the Kit**_
+4. _**Software**_
+5. _**Schematics of v0.5.0**_
+6. _**Revision history**_
 
 # _Version history_
 ## v0.0.1 = hand-wired prototype
+![](../pic/prototype.jpg)
+
 - Sunhayato's universal shield UB-ARD01
 - Switch Science(SSCI)'s SSCI-MBED-ETHER-KIT
 - mbed 1768
@@ -34,6 +37,8 @@ Abstract:
 - USB host supported
 
 ## v0.3.7 = second PCB design release
+![](../pic/mbedshield037.brd.png)
+
 - from this version it is named "mbeDshield", D is large character
 - USB host and device supported(mini-B USB on bottom side)
 - later arduino pin-out
@@ -42,15 +47,19 @@ Abstract:
 - no reset switch
 
 ## v0.4.0 = third PCB design release
-- most of components can be bought from AKIZUKI
+![](../pic/mbedshield040.brd.png)
+
+- **most of components can be bought from AKIZUKI**
 - all components on top side
 - design bug on Vin capacitor with normal-height(cheap) one (kit uses low height one!)
 - M3 mounting hole implemented finally
 - silkscreen on Both sides
 
 ## v0.4.1 = 4th PCB design rc1
-- only data exists
-- no RJ45 socket
+![](../pic/mbedshield041.sch.png)
+
+- **only data exists**
+- **no RJ45 socket**
 - 1mm(40mil)line ground
 - tail 2x3p pin headers for SPI (p5-8 shared)
 - silkscreen on Both sides
@@ -58,7 +67,9 @@ Abstract:
 - 7-9V input is necessary
 
 ## v0.4.2 = 4th PCB design rc2
-- only data exists
+![](../pic/mbedshield042.brd.png)
+
+- **only data exists**
 - split plane ground and Vin
 - local LDOs on 3V and 5V lines, 0.5A each
 - USB host is powered from mbed on-board LDO
@@ -67,8 +78,10 @@ Abstract:
 - ask SSCI or AKIZUKI for selling??? - maybe after prototype
 
 ## v0.5.0 = released 4th PCB design
+![](../pic/mbedshield050.function.png)
+
 - sales available from SSCI( https://www.switch-science.com/catalog/1717/ )
-- only 1 pcs left(as of 30/Dec/2014) and discontinued
+- only **1** pcs left(as of 30/Dec/2014) and _discontinued_
 - USB host is available only if main USB is connected(1768 only)
 - USB device mode only uses data lines(cannot get power from host)
 - I2C is only available with 1768(known bug)
@@ -99,11 +112,11 @@ Abstract:
 | 15  | SMD Schottky diode                   | I-2073         |   v   |   v   |   v   |   v   |   v   |   v   |   v   |
 | 16  | I2C/Analog switch                    | P-2627         |   v   |   v   |   v   |   v   |   v   |   v   |   v   |
 | 17  | TH Vin 100uF/16V                     | P-5002         |   v   |   v   |   v   |   -   |   -   |   v   |   v   |
-| 18  | RJ45 Ethernet connector from SSCI    |                |   v   |   v   |       |       |       |       |       |
-| 19  | RJ45 Ethernet connector from AKIZUKI | P-4809         |       |       |   v   |       |       |       |       |
-| 20  | reset switch                         | P-3647         |       |       |   v   |   v   |   v   |   v   |   v   |
-| 21  | SMD Vin 330uF/25V                    | P-6978         |       |       |       |   v   |   v   |       |       |
-| 22  | 2x3p high-height pin header          |                |       |       |       |   v   |   v   |   v   |   v   |
+| 18  | RJ45 Ethernet connector from SSCI    |                |   v   |   v   |   -   |   -   |   -   |   -   |   -   |
+| 19  | RJ45 Ethernet connector from AKIZUKI | P-4809         |   -   |   -   |   v   |   -   |   -   |   -   |   -   |
+| 20  | reset switch                         | P-3647         |   -   |   -   |   v   |   v   |   v   |   v   |   v   |
+| 21  | SMD Vin 330uF/25V                    | P-6978         |   -   |   -   |   -   |   v   |   v   |   -   |   -   |
+| 22  | 2x3p high-height pin header          |                |   -   |   -   |   -   |   v   |   v   |   v   |   v   |
 
 
 # _Soldering of the Kit_
@@ -116,9 +129,9 @@ d. USB sockets A and mini-B
 e. Vin capacitor
 f. DC jack
 g. board connectors
-  - unplug pins from one of each pair
-  - stack with other one
-  - solder stacked socket
+    - unplug pins from one of each pair
+    - stack with other one
+    - solder stacked socket
 h. Ethernet RJ45 socket(not for 0.5.0)
 
 # _Software_
@@ -158,4 +171,4 @@ Revision 2.0: released at C87(2014)
 |:----------------------------:|
 |       Kazuki Yamamoto        |
 |          @_K4ZUKI_           |
-|         Revision 2.0         |
+|         Revision 2.1         |
