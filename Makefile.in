@@ -1,18 +1,19 @@
+WINDOWS =
+ifdef WINDOWS
 #windows
 LS = C://busybox ls
 SH = C://busybox sh -c
-BASENAME=C://busybox basename
+BASENAME = C://busybox basename
 PANDOC = C:/Users/kyamamot/AppData/Local/Pandoc/pandoc
-PANSTYLES = C:/Users/kyamamot/AppData/Roaming/pandoc
 SVN = W://Tokyo/Home/kyamamot/common/SVN
+else
 #linux
 LS = ls
 SH = bash
-BASENAME=basename
+BASENAME = basename
 PANDOC = pandoc
+endif
 PANSTYLES = $(HOME)/.pandoc
-#SVN = W://Tokyo/Home/kyamamot/common/SVN
-#REPO = $(SVN)/Barolo2
 
 REFERENCE = $(PANSTYLES)/ref.docx
 OPTIONS = -s

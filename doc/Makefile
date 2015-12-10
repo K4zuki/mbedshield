@@ -1,10 +1,14 @@
 include ../Makefile.in
 
 INPUT = mbeDshield2015.md
-OUTPUT = $(shell basename $(INPUT) .md)
-CSV = $(shell ls *.csv)
-PICS = $(CSV:.csv=.png)
+OUTPUT = $(shell $(BASENAME) $(INPUT) .md)
+CSV = $(shell $(LS) *.csv)
 
+ifdef CSV
+PICS = $(CSV:.csv=.png)
+else
+PICS =
+endif
 
 all: docx html png
 
@@ -18,6 +22,7 @@ html: $(PICS)
 	$(PYTHON) $(CSV2PNG) --file $< --output $@
 
 png: $(PICS)
+	echo "echo"
 
 clean:
 	if [ -f $(OUTPUT).docx ] ;then rm $(OUTPUT).docx ;fi
