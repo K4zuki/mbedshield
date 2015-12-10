@@ -20,6 +20,6 @@ OPTIONS = -s
 OPTIONS += --read=markdown+ignore_line_breaks+header_attributes+escaped_line_breaks+implicit_figures
 #OPTIONS += --reference-docx=$(REFERENCE)
 OPTIONS += --number-sections
-FINDCSV = $(REPO)/findcsv.sh
+#FINDCSV = $(REPO)/findcsv.sh
 PYTHON=python
-CSV2PNG=${REPO}/csv2png.py
+#CSV2PNG=${REPO}/csv2png.py
