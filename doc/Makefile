@@ -9,7 +9,7 @@ PICS = $(CSV:.csv=.png)
 all: docx html png
 
 docx: $(PICS)
-	$(PANDOC) $(OPTIONS) --reference-docx=$(REFERENCE) $(INPUT) -o $(OUTPUT).docx
+	$(PANDOC) $(OPTIONS) --reference-docx=$(PANSTYLES)/ref.docx $(INPUT) -o $(OUTPUT).docx
 
 html: $(PICS)
 	$(PANDOC) $(OPTIONS) --self-contained -thtml5 --template=$(PANSTYLES)/github.html --webtex $(INPUT) -o $(OUTPUT).html
