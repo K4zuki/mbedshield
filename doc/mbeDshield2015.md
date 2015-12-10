@@ -22,7 +22,9 @@ abstract:
 
 # _Version history_
 ## v0.0.1 = hand-wired prototype
-![](../pic/prototype.jpg)
+|                           |
+|:-------------------------:|
+| ![](../pic/prototype.jpg) |
 
 - Sunhayato's universal shield UB-ARD01
 - Switch Science(SSCI)'s SSCI-MBED-ETHER-KIT
@@ -37,7 +39,9 @@ abstract:
 - USB host supported
 
 ## v0.3.7 = second PCB design release
-![](../pic/mbedshield037.brd.png)
+|                               |
+|:-----------------------------:|
+| ![](../pic/mbedshield037.png) |
 
 - from this version it is named "mbeDshield", D is large character
 - USB host and device supported(mini-B USB on bottom side)
@@ -47,7 +51,9 @@ abstract:
 - no reset switch
 
 ## v0.4.0 = third PCB design release
-![](../pic/mbedshield040.brd.png)
+|                               |
+|:-----------------------------:|
+| ![](../pic/mbedshield040.png) |
 
 - **most of components can be bought from AKIZUKI**
 - all components on top side
@@ -56,7 +62,9 @@ abstract:
 - silkscreen on Both sides
 
 ## v0.4.1 = 4th PCB design rc1
-![](../pic/mbedshield041.sch.png)
+|                               |
+|:-----------------------------:|
+| ![](../pic/mbedshield041.png) |
 
 - **only data exists**
 - **no RJ45 socket**
@@ -67,7 +75,9 @@ abstract:
 - 7-9V input is necessary
 
 ## v0.4.2 = 4th PCB design rc2
-![](../pic/mbedshield042.brd.png)
+|                               |
+|:-----------------------------:|
+| ![](../pic/mbedshield042.png) |
 
 - **only data exists**
 - split plane ground and Vin
@@ -78,7 +88,9 @@ abstract:
 - ask SSCI or AKIZUKI for selling??? - maybe after prototype
 
 ## v0.5.0 = released 4th PCB design
-![](../pic/mbedshield050.function.png)
+|                                        |
+|:--------------------------------------:|
+| ![](../pic/mbedshield050.function.png) |
 
 - sales available from SSCI( https://www.switch-science.com/catalog/1717/ )
 - only **1** pcs left(as of 30/Dec/2014) and _discontinued_
@@ -87,6 +99,10 @@ abstract:
 - I2C is only available with 1768(known bug)
 
 ## v0.6.0 = planned 5th PCB design
+|                                    |
+|:----------------------------------:|
+| ![](../pic/mbedshield060.func.png) |
+
 - only data exists
 - local LDO for USB host
 - I2C pin-out change: p27/28 → p9/10
