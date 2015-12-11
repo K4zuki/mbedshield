@@ -183,8 +183,13 @@ Revision 2.0: released at C87(2014)
 - modification/correction/replace from Revision 1.0
 - documented up to 0.6.0
 
+Revision 2.1: released at C89(2015, planned)
+
+- porting to markdown by using Revision 2.0 document
+- use pandoc to convert to docx
+
 | mbeDshield: YET ANOTHER MBED |
 |:----------------------------:|
 |       Kazuki Yamamoto        |
 |          @_K4ZUKI_           |
-|         Revision 2.1         |
+|      Revision 2.1 / C89      |
