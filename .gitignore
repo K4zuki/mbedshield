@@ -35,3 +35,8 @@ eagle.epf
 
 *.eps
 pic/Thumbs.db
+
+*.log
+*.toc
+*.aux
+*.log
