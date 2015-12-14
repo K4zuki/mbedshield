@@ -16,10 +16,7 @@ endif
 PANSTYLES = $(HOME)/.pandoc
 
 REFERENCE = $(PANSTYLES)/ref.docx
-OPTIONS = -s
+OPTIONS = -s -S
 OPTIONS += --read=markdown+ignore_line_breaks+header_attributes+escaped_line_breaks+implicit_figures
-#OPTIONS += --reference-docx=$(REFERENCE)
 OPTIONS += --number-sections
-#FINDCSV = $(REPO)/findcsv.sh
 PYTHON=python
-#CSV2PNG=${REPO}/csv2png.py
