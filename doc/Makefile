@@ -10,7 +10,7 @@ else
 PICS:=
 endif
 
-all: docx html pdf
+all: docx html
 
 docx: $(PICS)
 	$(PANDOC) $(OPTIONS) --toc --reference-docx=$(PANSTYLES)/ref.docx $(INPUT) -o $(OUTPUT).docx
