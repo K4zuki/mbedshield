@@ -52,9 +52,7 @@ geometry: top=30truemm,bottom=30truemm,left=20truemm,right=20truemm
 \newpage
 
 ## v0.3.7 = second PCB design release
-|                               |
-|:-----------------------------:|
-| ![](../pic/mbedshield037.png) |
+ ![mbeDshield 0.3.7](../pic/mbedshield037.png)
 
 - from this version it is named "mbeDshield", D is large character
 - USB host and device supported(mini-B USB on bottom side)
@@ -66,9 +64,7 @@ geometry: top=30truemm,bottom=30truemm,left=20truemm,right=20truemm
 \newpage
 
 ## v0.4.0 = third PCB design release
-|                               |
-|:-----------------------------:|
-| ![](../pic/mbedshield040.png) |
+ ![mbeDshield 0.4.0](../pic/mbedshield040.png)
 
 - **most of components can be bought from AKIZUKI**
 - all components on top side
@@ -79,9 +75,7 @@ geometry: top=30truemm,bottom=30truemm,left=20truemm,right=20truemm
 \newpage
 
 ## v0.4.1 = 4th PCB design rc1
-|                               |
-|:-----------------------------:|
-| ![](../pic/mbedshield041.png) |
+ ![mbeDshield 0.4.1](../pic/mbedshield041.png)
 
 - **only data exists**
 - **no RJ45 socket**
@@ -94,9 +88,7 @@ geometry: top=30truemm,bottom=30truemm,left=20truemm,right=20truemm
 \newpage
 
 ## v0.4.2 = 4th PCB design rc2
-|                               |
-|:-----------------------------:|
-| ![](../pic/mbedshield042.png) |
+ ![mbeDshield 0.4.2](../pic/mbedshield042.png)
 
 - **only data exists**
 - split plane ground and Vin
@@ -109,9 +101,7 @@ geometry: top=30truemm,bottom=30truemm,left=20truemm,right=20truemm
 \newpage
 
 ## v0.5.0 = released 4th PCB design
-|                                        |
-|:--------------------------------------:|
-| ![](../pic/mbedshield050.function.png) |
+ ![mbeDshield 0.5.0 function block diagram](../pic/mbedshield050.function.png)
 
 - sales available from SSCI^[https://www.switch-science.com/catalog/1717/]
 - only **1** pcs left(as of 31/Dec/2015) and _discontinued_
@@ -122,9 +112,7 @@ geometry: top=30truemm,bottom=30truemm,left=20truemm,right=20truemm
 \newpage
 
 ## v0.6.0 = released 5th PCB design
-|                                    |
-|:----------------------------------:|
-| ![](../pic/mbedshield060.func.png) |
+ ![mbeDshield 0.6.0 function block diagram](../pic/mbedshield060.func.png)
 
 - local LDO for USB host
 - I^2^C pin-out change: p27/28 → p9/10
@@ -175,16 +163,12 @@ From lower height components:
     - stack with other one
     - solder stacked socket
 
-|                                       |
-|:-------------------------------------:|
-| ![](../pic/instruction_connector.JPG) |
+ ![soldering connectors](../pic/instruction_connector.JPG)
 
 \newpage
 - Ethernet RJ45 socket(not applicable from 0.5.0)
 
-|                                   |
-|:---------------------------------:|
-| ![](../pic/instruction_ether.JPG) |
+ ![soldering Ethernet connector](../pic/instruction_ether.JPG)
 
 \newpage
 
@@ -195,22 +179,21 @@ You can use any existing softwares for mbed. From writer's experience:
 - onboard Ethernet + NTP client
 - onchip USB host + Bluetooth dongle to communicate with Wiimote(a.k.a. Wii Rimokon)
 
-### all versions{.unnumbered}
+## all versions{.unnumbered}
 - 2.8 inch touch LCD shield from Seeed Studio^[https://www.switch-science.com/catalog/1173/]
 - VFD clock shield^[https://www.switch-science.com/catalog/1954/] from SSCI/@hayasita
 - Touch Shield(MPR121 used) from sparkfun^[https://www.switch-science.com/catalog/1966/]
 - SPI memory LCD from AKIZUKI(need to make your own shield)
     - **breakout board is available from MARUTSU^[http://www.marutsu.co.jp/pc/i/259032/] (2015~)**
-- I^2^C graphic LCD from AKIZUKI(need to make your own shield)
-- I^2^C 16x2 character LCD from AKIZUKI(need to make your own shield)
-- Aquestalk Pico from AKIZUKI(need to make your own shield)
-- eVY1 shield from SSCI
+- I^2^C 16x2 character LCD from AKIZUKI^[http://akizukidenshi.com/catalog/g/gP-05693/]
+- Aquestalk Pico from AKIZUKI^[http://akizukidenshi.com/catalog/g/gI-06220/]
+- eVY1 shield from SSCI^[https://www.switch-science.com/catalog/1489/]
 
-### UNDER CONFIRMATIONS:{.unnumbered}
-- Ethernet shield R3 from SSCI/Arduino team
-- USB host shield from sparkfun
-- Xbee shield from sparkfun
-- Gameduino from SSCI
+## UNDER CONFIRMATIONS:{.unnumbered}
+- ~~Ethernet shield R3 from SSCI/Arduino team~~ **Discontinued**
+- USB host shield from Arduino team^[https://www.switch-science.com/catalog/1933/]
+- Xbee shield from sparkfun^[https://www.switch-science.com/catalog/1972/]
+- ~~Gameduino from SSCI~~ **Discontinued**
 
 \newpage
 # Schematics of v0.6.0
@@ -229,8 +212,8 @@ You can use any existing softwares for mbed. From writer's experience:
 - porting to markdown by using Revision 2.0 document
 - use pandoc to convert to docx
 
-| mbeDshield: YET ANOTHER MBED |
-|:----------------------------:|
-|       Kazuki Yamamoto        |
-|         @\_K4ZUKI\_          |
-|      Revision 3.0 / C89      |
+|  mbeDshield: YET ANOTHER MBED   |
+|:-------------------------------:|
+|         Kazuki Yamamoto         |
+|           @\_K4ZUKI\_           |
+| Revision 3.0 / C89 / 2015-12-31 |
