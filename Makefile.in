@@ -19,4 +19,5 @@ REFERENCE = $(PANSTYLES)/ref.docx
 OPTIONS = -s -S
 OPTIONS += --read=markdown+ignore_line_breaks+header_attributes+escaped_line_breaks+implicit_figures
 OPTIONS += --number-sections
-PYTHON=python
+PYTHON:= python
+CONV2MONO:= ../convert2mono.py

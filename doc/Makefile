@@ -2,13 +2,13 @@ include ../Makefile.in
 
 INPUT:=mbeDshield2015.md
 OUTPUT:=$(shell $(BASENAME) $(INPUT) .md)
-CSV:=$(shell $(LS) *.csv)
-
-ifdef CSV
-PICS:=$(CSV:.csv=.png)
-else
-PICS:=
-endif
+PNG:=$(shell $(LS) ../pic/*.png)
+#
+#ifdef CSV
+PICS:=$(PNG:.png=.mono.png)
+#else
+#PICS:=
+#endif
 
 all: docx html pdf
 
@@ -22,11 +22,12 @@ tex:
 	$(PANDOC) $(OPTIONS) --toc --template=template.tex --latex-engine=xelatex $(INPUT) -o $(OUTPUT).tex
 
 pdf: tex
+#	lualatex $(OUTPUT).tex;lualatex $(OUTPUT).tex
 	xelatex $(OUTPUT).tex;xelatex $(OUTPUT).tex
 #	$(PANDOC) $(OPTIONS) --toc --template=template.tex --latex-engine=xelatex $(INPUT) -o $(OUTPUT).pdf
 
-%.png: %.csv
-	$(PYTHON) $(CSV2PNG) --file $< --output $@
+%.mono.png: %.png
+	$(PYTHON) $(CONV2MONO) --input $< --output $@
 
 png: $(PICS)
 	@echo "echo"
