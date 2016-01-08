@@ -141,16 +141,16 @@ $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
 
-$if(title)$
-\title{$title$$if(subtitle)$\\\vspace{0.5em}{\large $subtitle$}$endif$}
-$endif$
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-$endif$
-\date{$date$}
-$for(header-includes)$
-$header-includes$
-$endfor$
+%$if(title)$
+%\title{$title$$if(subtitle)$\\\vspace{0.5em}{\large $subtitle$}$endif$}
+%$endif$
+%$if(author)$
+%\author{$for(author)$$author$$sep$ \and $endfor$}
+%$endif$
+%\date{$date$}
+%$for(header-includes)$
+%$header-includes$
+%$endfor$
 
 % Redefines (sub)paragraphs to behave more like sections
 \ifx\paragraph\undefined\else
@@ -162,21 +162,55 @@ $endfor$
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+
+
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+\centering % Center all text
+\vspace*{\baselineskip} % White space at the top of the page
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+
+{$title$}\\[0.2\baselineskip] % Title
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+
+\scshape % Small caps
+$if(abstract)$
+$abstract$
+$endif$
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+Edited by \\[\baselineskip]
+{\Large $author$} % Editor list
+%{\itshape The University of California \\ Berkeley\par} % Editor affiliation
+
+\vfill* % Whitespace between editor names and publisher logo
+
+%\plogo \\[0.3\baselineskip] % Publisher logo
+{\scshape }$date$ \\[0.3\baselineskip] % Year published
+%{\large THE PUBLISHER}\par % Publisher
+
+\endgroup}
+
+\usepackage{ascmac}
+\usepackage{fancybx}
+
 \begin{document}
 $if(title)$
-\maketitle
+%\maketitle
+\titleGP
+\thispagestyle{empty}
 $endif$
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
+
 
 $for(include-before)$
 $include-before$
 
 $endfor$
 $if(toc)$
+\newpage
 {
 \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
 \setcounter{tocdepth}{$toc-depth$}
