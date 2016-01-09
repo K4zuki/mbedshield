@@ -4,11 +4,11 @@ INPUT:=mbeDshield2015.md
 OUTPUT:=$(shell $(BASENAME) $(INPUT) .md)
 PNG:=$(shell $(LS) ../pic/*.png)
 #
-#ifdef CSV
+ifdef CSV
 PICS:=$(PNG:.png=.mono.png)
-#else
-#PICS:=
-#endif
+else
+PICS:=
+endif
 
 all: docx html
 
