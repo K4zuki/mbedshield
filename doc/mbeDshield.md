@@ -5,7 +5,7 @@ abstract:
   mbeDshieldはもうひとつのmbed^TM^互換ボードです。Arduinoのような外見で、
   Arduino用の"シールド"ならばなんでもmbedのLPC1768/11U24/**11U35(NEW!)** からコントロールできるようになります。  
   このドキュメントは最新の**0.6.0**PCBバージョンと以前のバージョン遍歴を羅列したものです。
-  **このドキュメントの以前のバージョンは全て英文でしたが非常に不評だったのでこんかいは_にほんごでかきます_。**
+  **このドキュメントの以前のバージョンは全て英文でしたが非常に不評だったので**今回は*にほんごでかきます*。
 papersize: b5paper
 documentclass: article
 mainfont: TeX Gyre Heros
@@ -47,7 +47,12 @@ mbedをブレッドボードでどうこうするのは嫌だな〜とか、Ardu
 
 # _バージョン履歴_
 ## v0.0.1 = 手配線で作ったプロトタイプ
- ![プロトタイプ](../pic/prototype.jpg)
+
+|                                       |
+|:-------------------------------------:|
+| ![プロトタイプ](../pic/prototype.jpg) |
+
+Table:プロトタイプ
 
 - サンハヤトのユニバーサルシールド"UB-ARD01"を使用
 - スイッチサイエンスの
@@ -59,7 +64,12 @@ SSCI-MBED-ETHER-KIT^[https://www.switch-science.com/catalog/555/] を使用
 \newpage
 
 ## v0.1.0 = "mbeduino"として設計された最初の基板
- ![mbeduino 0.1.0 配線図](../pic/mbeduino010.png)
+
+|                                                  |
+|:------------------------------------------------:|
+| ![mbeduino 0.1.0 配線図](../pic/mbeduino010.png) |
+
+Table:mbeduino 0.1.0 配線図
 
 - アホなのでネーミング衝突の可能性についてググらなかった
     - 見事バッティングしてた
@@ -73,7 +83,12 @@ SSCI-MBED-ETHER-KIT^[https://www.switch-science.com/catalog/555/] を使用
 \newpage
 
 ## v0.3.7 = 2番めの設計リリース
- ![mbeDshield 0.3.7 配線図](../pic/mbedshield037.png)
+
+|                                                      |
+|:----------------------------------------------------:|
+| ![mbeDshield 0.3.7 配線図](../pic/mbedshield037.png) |
+
+Table:mbeDshield 0.3.7 配線図
 
 - このバージョンから呼び名を"mbeDshield"に変更。Dは大文字
 - USBミニBコネクタを裏面に配置しUSBホストとデバイスの両動作をサポート
@@ -86,7 +101,12 @@ SSCI-MBED-ETHER-KIT^[https://www.switch-science.com/catalog/555/] を使用
 \newpage
 
 ## v0.4.0 = 3番めのリリース
- ![mbeDshield 0.4.0 配線図](../pic/mbedshield040.png)
+
+|                                                      |
+|:----------------------------------------------------:|
+| ![mbeDshield 0.4.0 配線図](../pic/mbedshield040.png) |
+
+Table:mbeDshield 0.4.0 配線図
 
 - **ほぼすべての部品を秋月電子から購入可能にした**
 - 裏面配置の部品なし
@@ -99,7 +119,12 @@ SSCI-MBED-ETHER-KIT^[https://www.switch-science.com/catalog/555/] を使用
 \newpage
 
 ## v0.4.1 = 4番目のリリース候補その1
- ![mbeDshield 0.4.1 配線図](../pic/mbedshield041.png)
+
+|                                                      |
+|:----------------------------------------------------:|
+| ![mbeDshield 0.4.1 配線図](../pic/mbedshield041.png) |
+
+Table:mbeDshield 0.4.1 配線図
 
 - **データだけ作った**
 - **イーサネット用RJ45コネクタを削除**
@@ -112,7 +137,12 @@ SSCI-MBED-ETHER-KIT^[https://www.switch-science.com/catalog/555/] を使用
 \newpage
 
 ## v0.4.2 = 4番目のリリース候補その2
- ![mbeDshield 0.4.2 配線図](../pic/mbedshield042.png)
+
+|                                                      |
+|:----------------------------------------------------:|
+| ![mbeDshield 0.4.2 配線図](../pic/mbedshield042.png) |
+
+Table:mbeDshield 0.4.2 配線図
 
 - **データだけ作った**
 - Vinとグランドをベタに
@@ -126,7 +156,12 @@ SSCI-MBED-ETHER-KIT^[https://www.switch-science.com/catalog/555/] を使用
 \newpage
 
 ## v0.5.0 = 4番目の正式リリース
- ![mbeDshield 0.5.0 ブロック図](../pic/mbedshield050.function.png)
+
+|                                                                   |
+|:-----------------------------------------------------------------:|
+| ![mbeDshield 0.5.0 ブロック図](../pic/mbedshield050.function.png) |
+
+Table:mbeDshield 0.5.0 機能ブロック図
 
 - スイッチサイエンスで委託販売開始
 ^[https://www.switch-science.com/catalog/1717/]
@@ -138,8 +173,13 @@ SSCI-MBED-ETHER-KIT^[https://www.switch-science.com/catalog/555/] を使用
 
 \newpage
 
-## v0.6.0 = released 5th PCB design
- ![mbeDshield 0.6.0 機能ブロック図](../pic/mbedshield060.func.png)
+## v0.6.0 = 最新(5番目)の基板リリース
+
+|                                                                   |
+|:-----------------------------------------------------------------:|
+| ![mbeDshield 0.6.0 機能ブロック図](../pic/mbedshield060.func.png) |
+
+Table:mbeDshield 0.6.0 機能ブロック図
 
 - USBホスト動作のための専用レギュレータ復活
 - I^2^Cピンに使用するmbedのピンをp27/28からp9/10に変更
@@ -191,10 +231,17 @@ From lower height components:
     - 2個重なった状態でハンダ付け
 1. イーサネット用RJ45コネクタ^[0.5.0以降はこの部分不要]
 
- ![ピンソケットを積み重ねる](../pic/instruction_connector.JPG)
+|                                                               |
+|:-------------------------------------------------------------:|
+| ![ピンソケットを積み重ねる](../pic/instruction_connector.JPG) |
 
- ![イーサネットコネクタをハンダ付け](../pic/instruction_ether.JPG)
+Table:ピンソケットを積み重ねる
 
+|                                                                   |
+|:-----------------------------------------------------------------:|
+| ![イーサネットコネクタをハンダ付け](../pic/instruction_ether.JPG) |
+
+Table:イーサネットコネクタをハンダ付け
 \newpage
 
 # _ソフトウェア対応_
@@ -222,7 +269,10 @@ mbed用の各種ソフトを使うことができます。筆者の経験では.
 
 \newpage
 # バージョン0.6.0回路図
-![](../pic/mbedshield060.sch.rotate.png)
+
+|                                          |
+|:----------------------------------------:|
+| ![](../pic/mbedshield060.sch.rotate.png) |
 
 \newpage
 # 編集履歴
