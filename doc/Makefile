@@ -1,6 +1,7 @@
 include ../Makefile.in
 
-INPUT:=mbeDshield2015.md
+#INPUT:=mbeDshield2015.md
+INPUT:=mbeDshield.md
 OUTPUT:=$(shell $(BASENAME) $(INPUT) .md)
 PNG:=$(shell $(LS) ../pic/*.png)
 #
@@ -41,3 +42,4 @@ clean:
 	if [ -f $(OUTPUT).log ] ;then rm $(OUTPUT).log ;fi
 	if [ -f $(OUTPUT).toc ] ;then rm $(OUTPUT).toc ;fi
 	if [ -f $(OUTPUT).pdf ] ;then rm $(OUTPUT).pdf ;fi
+	rm ../pic/*.mono.png
