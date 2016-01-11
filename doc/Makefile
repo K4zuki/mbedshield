@@ -20,15 +20,17 @@ html: $(PICS)
 	$(PANDOC) $(OPTIONS) --self-contained -thtml5 --template=$(PANSTYLES)/github.html --webtex $(INPUT) -o $(OUTPUT).html
 
 tex:
-	$(PANDOC) $(OPTIONS) --toc --template=template.tex --latex-engine=xelatex $(INPUT) -o $(OUTPUT).tex
+	$(PANDOC) $(OPTIONS) --toc --template=$(PANSTYLES)/CJK_xelatex.tex --latex-engine=xelatex $(INPUT) -o $(OUTPUT).tex
+#	$(PANDOC) $(OPTIONS) --toc --template=template.tex --latex-engine=xelatex $(INPUT) -o $(OUTPUT).tex
 
 pdf: tex
 #	lualatex $(OUTPUT).tex;lualatex $(OUTPUT).tex
-	xelatex $(OUTPUT).tex;xelatex $(OUTPUT).tex
+	xelatex --no-pdf $(OUTPUT).tex ;xelatex $(OUTPUT).tex
 #	$(PANDOC) $(OPTIONS) --toc --template=template.tex --latex-engine=xelatex $(INPUT) -o $(OUTPUT).pdf
 
 %.mono.png: %.png
 	$(PYTHON) $(CONV2MONO) --input $< --output $@
+	touch ../pic/mono.png
 
 png: $(PICS)
 	@echo "echo"
@@ -42,4 +44,4 @@ clean:
 	if [ -f $(OUTPUT).log ] ;then rm $(OUTPUT).log ;fi
 	if [ -f $(OUTPUT).toc ] ;then rm $(OUTPUT).toc ;fi
 	if [ -f $(OUTPUT).pdf ] ;then rm $(OUTPUT).pdf ;fi
-	rm ../pic/*.mono.png
+	if [ -f ../pic/mono.png ];then rm ../pic/*.mono.png ; fi
