@@ -34,7 +34,7 @@ eagle.epf
 *.info
 
 *.eps
-pic/Thumbs.db
+*/Thumbs.db
 
 *.out
 *.toc
